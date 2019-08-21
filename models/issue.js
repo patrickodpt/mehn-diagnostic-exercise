@@ -11,12 +11,22 @@ mongoose.set('useFindAndModify', false);
 /* Step 2: create model schema */
 const IssueSchema = new mongoose.Schema(
   {
-    description: String,
-    createdAt: Date,
-    //checked Date data type; works, but has special properties.
-    //refer to doc.
-    status: String,
-    priority: String,
+    description: {
+      type: String,
+      required: '{PATH} is required.'
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now //doesn't work, yet.
+    },
+    status: {
+      type: String,
+      default: 'open'
+    },
+    priority: {
+      type: String,
+      enum: ["High","Medium","Low"]
+    }
   }
 )
 
