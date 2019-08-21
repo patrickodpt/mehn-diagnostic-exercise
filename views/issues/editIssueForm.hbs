@@ -1,0 +1,16 @@
+<form action="/issues/{{issue._id}}?_method=PUT" method="post">
+  <!-- may need to add for="" for AJAX -->
+  <label>DESCRIPTION: </label>
+  <input type="text" name="description" value="{{issue.description}}">
+
+  <label>DATE: </label>
+  <input type="date" name="createdAt" value="{{issue.createdAt}}">
+
+  <label>STATUS: </label>
+  <input type="text" name="status" value="{{issue.status}}">
+
+  <label>PRIORITY: </label>
+  <input type="text" name="priority" value="{{issue.priority}}">
+
+  <input type="submit" name="SUBMIT NEW ISSUE">
+</form>

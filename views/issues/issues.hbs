@@ -1,0 +1,14 @@
+<h1>ALL CURRENT ISSUES</h1>
+
+<a href="/issues/newIssue">NEW ISSUE</a>
+
+<ol>
+  <!--UNSURE IF BELOW NEEDS TO BE allIssues OR IS AN
+  ARBITRARY PLACEHOLDER-->
+  <!-- APPEARS TO NEED TO MATCH OBJECT PASSED IN CONTROLLER (issue.js) -->
+  {{#each allIssues}}
+    <li>
+      <a href="/issues/{{id}}">ID: {{id}} Description: {{description}}</a>
+    </li>
+  {{/each}}
+</ol>

@@ -4,7 +4,7 @@ const app = express()
 const methodOverride = require('method-override')
 
 /* Step 2: import routers from controllers/... */
-const { templateRouter } = require('./controllers/template.js')
+const { issueRouter } = require('./controllers/issue.js')
 
 
 /* Step 3: Register middleware... */
